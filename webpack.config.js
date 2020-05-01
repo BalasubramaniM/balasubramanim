@@ -6,9 +6,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: ["babel-loader", "eslint-loader"],
       },
       {
         test: /\.html$/,
@@ -17,6 +15,10 @@ module.exports = {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ]
   },
