@@ -6,7 +6,7 @@ const HomePage = {
     background: ${props => props.theme.primaryBgColor};
   `,
   Container: styled.div`
-    max-width: 1048px;
+    max-width: 1540px;
     margin: 0 auto;
   `,
   Content: styled.div`
@@ -14,6 +14,11 @@ const HomePage = {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    animation-name: appearOut;
+    animation-duration: .55s;
+    animation-fill-mode: forwards;
+    animation-delay: .15s;
+    opacity: 0;
   `,
   TypeWriter: styled.div`
     
@@ -24,7 +29,7 @@ const HomePage = {
   `,
   TypeWriterText: styled.h1`
     color: ${props => props.theme.primaryColor};
-    font-size: 4vw;
+    font-size: 3.5vw;
     line-height: 82px;
     font-weight: 900;
     margin-top: 0;

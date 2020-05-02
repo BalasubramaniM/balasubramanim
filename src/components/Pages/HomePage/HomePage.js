@@ -17,7 +17,7 @@ const HomePageComponent = (props) => {
       <HomePage.Container>
         <HomePage.Content>
           <HomePage.TypeWriter>
-            <HomePage.TypeWriterHeading>I can create</HomePage.TypeWriterHeading>
+            <HomePage.TypeWriterHeading>I can</HomePage.TypeWriterHeading>
             <HomePage.TypeWriterText id="typewriter"></HomePage.TypeWriterText>
           </HomePage.TypeWriter>
         </HomePage.Content>

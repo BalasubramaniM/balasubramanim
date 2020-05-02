@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const Navbar = {
-  Container: styled.nav`
+const Header = {
+  Container: styled.header`
     width: 100%;
-    height: 70px;
+    height: 64px;
     position: fixed;
     color: ${props => props.theme.primaryColor};
   `,
   Section: styled.div`
-    max-width: 1048px;
+    max-width: 1540px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -17,8 +17,10 @@ const Navbar = {
     justify-content: space-between;
     padding: 0 1em;
   `,
-  Logo: styled.span``,
-  Nav: styled.div``,
+  Logo: styled.a`
+    font-weight: 600;
+  `,
+  Nav: styled.nav``,
   NavItem: styled.a`
     margin-right: 1em;
 
@@ -31,4 +33,4 @@ const Navbar = {
   `,
 }
 
-export { Navbar }
+export { Header }

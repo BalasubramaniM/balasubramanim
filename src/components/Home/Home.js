@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { theme } from '../../themes';
 import Footer from '../Footer';
-import Navbar from '../Navbar';
+import Header from '../Header';
 import { HomePage } from '../Pages';
 import { Home, Main } from './home.styles';
 
@@ -11,7 +11,7 @@ const HomeComponent = () => {
   return (
     <ThemeProvider theme={theme}>
       <Home.Container>
-        <Navbar />
+        <Header />
         <Main.Container>
           <HomePage />
         </Main.Container>

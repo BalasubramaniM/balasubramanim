@@ -1,8 +1,46 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
     box-sizing: border-box;
-    font-family: Lato, Roboto, sans-serif, serif;
+    font-family: Cereal, Lato, Roboto, sans-serif, serif;
     width: auto !important;
     margin: 0px;
+}
+
+@keyframes appearOut {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,-5px,-5px);
+    transform: scale3d(.96,.96,.96);
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@font-face {
+    font-family: 'Cereal';
+    src: local('Cereal'),
+         url('./fonts/airbnb-cereal-app-cufonfonts/AirbnbCerealLight.woff') format('woff'),
+         url('./fonts/airbnb-cereal-app-cufonfonts/AirbnbCerealLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cereal';
+  font-weight: 900;
+  src: local('Cereal'),
+       url('./fonts/airbnb-cereal-app-cufonfonts/AirbnbCerealBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cereal';
+  font-weight: 600;
+  src: local('Cereal'),
+       url('./fonts/airbnb-cereal-app-cufonfonts/AirbnbCerealMedium.woff') format('woff');
 }
 
 /* Extra small devices (phones, 600px and down) */
