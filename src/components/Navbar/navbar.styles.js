@@ -5,6 +5,7 @@ const Navbar = {
     width: 100%;
     height: 70px;
     position: fixed;
+    color: ${props => props.theme.primaryColor};
   `,
   Section: styled.div`
     max-width: 1048px;
@@ -24,6 +25,9 @@ const Navbar = {
     :last-child {
         margin-right: 0;
     }
+  `,
+  Icon: styled.div`
+    cursor: pointer;
   `,
 }
 

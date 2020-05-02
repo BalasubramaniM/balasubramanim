@@ -1,19 +1,23 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
+import { theme } from '../../themes';
+import Footer from '../Footer';
 import Navbar from '../Navbar';
 import { HomePage } from '../Pages';
-import Footer from '../Footer';
 import { Home, Main } from './home.styles';
 
 const HomeComponent = () => {
   return (
-    <Home.Container>
-      <Navbar />
-      <Main.Container>
-        <HomePage />
-      </Main.Container>
-      <Footer />
-    </Home.Container>
+    <ThemeProvider theme={theme}>
+      <Home.Container>
+        <Navbar />
+        <Main.Container>
+          <HomePage />
+        </Main.Container>
+        <Footer />
+      </Home.Container>
+    </ThemeProvider>
   )
 }
 
