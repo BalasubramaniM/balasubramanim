@@ -14,6 +14,7 @@ const Navbar = {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1em;
   `,
   Logo: styled.span``,
   Nav: styled.div``,

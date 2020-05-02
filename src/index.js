@@ -1,4 +1,8 @@
-import './styles.css';
-import Home from './js/components/Home';
+import React from 'react';
+import ReactDOM from "react-dom";
 
-export default Home;
+import './styles.css';
+import Home from './components/Home';
+
+const wrapper = document.getElementById("container");
+wrapper ? ReactDOM.render(<Home />, wrapper) : false;
