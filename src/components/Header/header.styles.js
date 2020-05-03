@@ -39,7 +39,19 @@ const Header = {
   `,
   Icon: styled.div`
     cursor: pointer;
+    margin: 1em;
+  `,
+  SVG: styled.div`
+    width: 16px;
+    height: 16px;
   `,
 }
 
-export { Header }
+const MobileHeader = {
+  Container: styled.div`
+    background: white;
+    height: 100px;
+  `,
+}
+
+export { Header, MobileHeader }

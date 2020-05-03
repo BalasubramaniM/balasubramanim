@@ -13,7 +13,7 @@ const ProjectsPageComponent = () => {
   return (
     <Projects.Section id="projects">
       <Projects.Container>
-        <Projects.Content className='appearOut'>
+        <Projects.Content className='projectContent appearOut'>
           <Projects.List>
             <Projects.Heading>Projects</Projects.Heading>
             <Projects.SubTitle>Some of the projects that showcase my skills.</Projects.SubTitle>

@@ -1,35 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Menu from './assets/menu.svg';
-import { Header } from './header.styles';
+import { Header, MobileHeader } from './header.styles';
 
 const NavbarComponent = () => {
+  const [openMobileHeader, setOpenMobileHeader] = useState(false);
+
   return (
     <Header.Container>
-      <Header.Section className='appearOut'>
-        <Header.Logo href="#">
+      {openMobileHeader ? (<MobileHeader.Container></MobileHeader.Container>) : (
+        <Header.Section className='appearOut'>
+          <Header.Logo href="#">
             Balasubramani M
-        </Header.Logo>
-        <Header.Nav>
-          <Header.UL>
-            <Header.LI>
-              <Header.NavItem href="#projects">Projects</Header.NavItem>
-            </Header.LI>
-            <Header.LI>
-              <Header.NavItem href="#">Experience</Header.NavItem>
-            </Header.LI>
-            <Header.LI>
-              <Header.NavItem href="#">Testimonials</Header.NavItem>
-            </Header.LI>
-            <Header.LI>
-              <Header.NavItem href="#">Contact</Header.NavItem>
-            </Header.LI>
-          </Header.UL>
-        </Header.Nav>
-        {/* <Navbar.Icon>
-          <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16px" height="16px"><path d="M 1 2 L 1 3 L 14 3 L 14 2 Z M 1 7 L 1 8 L 14 8 L 14 7 Z M 1 12 L 1 13 L 14 13 L 14 12 Z"/></svg>
-        </Navbar.Icon> */}
-      </Header.Section>
+          </Header.Logo>
+          <Header.Nav className="headerNav">
+            <Header.UL>
+              <Header.LI>
+                <Header.NavItem href="#projects">Projects</Header.NavItem>
+              </Header.LI>
+              <Header.LI>
+                <Header.NavItem href="#">Experience</Header.NavItem>
+              </Header.LI>
+              <Header.LI>
+                <Header.NavItem href="#">Testimonials</Header.NavItem>
+              </Header.LI>
+              <Header.LI>
+                <Header.NavItem href="#">Contact</Header.NavItem>
+              </Header.LI>
+            </Header.UL>
+          </Header.Nav>
+          <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon">
+            <Header.SVG>
+              <div dangerouslySetInnerHTML={{ __html: Menu }} />
+            </Header.SVG>
+          </Header.Icon>
+        </Header.Section>
+      )}
     </Header.Container>
   )
 }
