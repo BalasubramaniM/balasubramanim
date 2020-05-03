@@ -16,7 +16,7 @@ body {
     font-size: 1em;
 }
 
-body, ul, h1, h2 {
+body, ul, h1, h2, a, p {
   margin: 0;
   padding: 0;
   border: 0;

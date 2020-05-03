@@ -15,7 +15,7 @@ const ProjectsPageComponent = () => {
       <Projects.Container>
         <Projects.Content className='appearOut'>
           <Projects.List>
-            <Projects.Heading>Projects</Projects.Heading>
+            <Projects.Title>Projects</Projects.Title>
             <Projects.SubTitle>Some of the projects that showcase my skills.</Projects.SubTitle>
             <Projects.AppContainer>
               {ProjectsList.map(p => (

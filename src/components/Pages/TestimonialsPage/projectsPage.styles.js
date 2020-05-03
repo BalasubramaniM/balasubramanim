@@ -14,19 +14,14 @@ const Projects = {
   Content: styled.div`
     display: flex;
     /* align-items: center; */
-    /* padding: 1em; */
+    padding: 1em;
   `,
   List: styled.div`
     flex: 1;
-    padding: 1em;
+    /* padding: 5em; */
   `,
   Desc: styled.div`
     flex: 1;
-    padding: 1em;
-  `,
-  Heading: styled.h1`
-    font-size: 2em;
-    margin-top: 0.6em;
   `,
   Title: styled.a`
     font-weight: 700;
