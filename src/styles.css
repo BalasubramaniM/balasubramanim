@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -8,6 +12,18 @@ body {
     font-family: Cereal, Lato, Roboto, sans-serif, serif;
     width: auto !important;
     margin: 0px;
+    text-rendering: optimizeLegibility;
+    font-size: 1em;
+}
+
+body, ul, h1, h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 @keyframes appearOut {
@@ -20,6 +36,14 @@ body {
     transform: translateZ(0);
     opacity: 1;
   }
+}
+
+.appearOut {
+  animation-name: appearOut;
+  animation-duration: .55s;
+  animation-fill-mode: forwards;
+  animation-delay: .15s;
+  opacity: 0;
 }
 
 @font-face {

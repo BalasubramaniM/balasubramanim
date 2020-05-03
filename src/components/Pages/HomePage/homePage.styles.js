@@ -14,24 +14,19 @@ const HomePage = {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    animation-name: appearOut;
-    animation-duration: .55s;
-    animation-fill-mode: forwards;
-    animation-delay: .15s;
-    opacity: 0;
   `,
   TypeWriter: styled.div`
-    
+    margin: 1em;
+    font-size: 2em;
   `,
-  TypeWriterHeading: styled.p`
-    font-size: 2vw;
+  TypeWriterHeading: styled.h1`
     margin: 0;
+    font-weight: 300;
   `,
-  TypeWriterText: styled.h1`
-    color: ${props => props.theme.primaryColor};
-    font-size: 3.5vw;
+  TypeWriterText: styled.h2`
+    /* color: ${props => props.theme.secondaryColor}; */
     line-height: 82px;
-    font-weight: 900;
+    font-weight: 600;
     margin-top: 0;
   `,
 }

@@ -6,6 +6,7 @@ const Header = {
     height: 64px;
     position: fixed;
     color: ${props => props.theme.primaryColor};
+    z-index: 1;
   `,
   Section: styled.div`
     max-width: 1540px;
@@ -15,14 +16,22 @@ const Header = {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1em;
   `,
   Logo: styled.a`
     font-weight: 600;
+    margin: 1em;
   `,
   Nav: styled.nav``,
+  UL: styled.ul``,
+  LI: styled.li`
+    display: inline-block;
+    margin: 1em;
+  `,
   NavItem: styled.a`
-    margin-right: 1em;
+    :hover {
+      /* box-shadow: 0 2px 0 #2b2b2b; */
+      box-shadow: 0 2px 0 ${props => props.theme.primaryColor};
+    }
 
     :last-child {
         margin-right: 0;

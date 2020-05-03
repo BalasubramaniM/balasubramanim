@@ -15,9 +15,9 @@ const HomePageComponent = (props) => {
   return (
     <HomePage.Section>
       <HomePage.Container>
-        <HomePage.Content>
+        <HomePage.Content className='appearOut'>
           <HomePage.TypeWriter>
-            <HomePage.TypeWriterHeading>I can</HomePage.TypeWriterHeading>
+            <HomePage.TypeWriterHeading>Hello, I'm Bala. I can,</HomePage.TypeWriterHeading>
             <HomePage.TypeWriterText id="typewriter"></HomePage.TypeWriterText>
           </HomePage.TypeWriter>
         </HomePage.Content>

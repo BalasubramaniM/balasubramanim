@@ -25,7 +25,7 @@ module.exports = {
         use: ['svg-inline-loader'],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|png)$/,
         use: [
           'file-loader',
         ],

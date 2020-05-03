@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '../../themes';
 import Footer from '../Footer';
 import Header from '../Header';
-import { HomePage } from '../Pages';
+import { HomePage, ProjectPage } from '../Pages';
 import { Home, Main } from './home.styles';
 
 const HomeComponent = () => {
@@ -14,6 +14,7 @@ const HomeComponent = () => {
         <Header />
         <Main.Container>
           <HomePage />
+          <ProjectPage />
         </Main.Container>
         <Footer />
       </Home.Container>
