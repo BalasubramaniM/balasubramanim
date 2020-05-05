@@ -4,6 +4,8 @@ const HomePage = {
   Section: styled.section`
     color: ${props => props.theme.primaryColor};
     background: ${props => props.theme.primaryBgColor};
+    transform: ${props => props.openMobileHeader ? 'translateY(100px) translateZ(0px)' : 'none'};
+    transition: transform 330ms ease-in-out;
   `,
   Container: styled.div`
     max-width: 1540px;

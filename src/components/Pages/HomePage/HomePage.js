@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import Typewriter from 'typewriter-effect/dist/core';
 
 import { HomePage } from './homePage.styles';
@@ -12,8 +13,9 @@ const HomePageComponent = (props) => {
       loop: true,
     });
   })
+  const { openMobileHeader } = props;
   return (
-    <HomePage.Section>
+    <HomePage.Section openMobileHeader={openMobileHeader}>
       <HomePage.Container>
         <HomePage.Content className='appearOut'>
           <HomePage.TypeWriter>
@@ -26,4 +28,8 @@ const HomePageComponent = (props) => {
   )
 }
 
-export default HomePageComponent;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps, null)(HomePageComponent);

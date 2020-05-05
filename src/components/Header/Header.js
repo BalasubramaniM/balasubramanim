@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 
+import { openMobileHeaderAction } from '../../actions/actions';
 import Menu from './assets/menu.svg';
 import { Header, MobileHeader } from './header.styles';
 
-const NavbarComponent = () => {
-  const [openMobileHeader, setOpenMobileHeader] = useState(false);
+const NavbarComponent = (props) => {
+
+  const { openMobileHeaderAction } = props;
+  const openMobileHeaderFunc = () => {
+    openMobileHeaderAction(true);
+  }
 
   return (
     <Header.Container>
-      {openMobileHeader ? (<MobileHeader.Container></MobileHeader.Container>) : (
+      {props.openMobileHeader ? (
+        <MobileHeader.Container>
+          <button onClick={() => openMobileHeaderAction(false)}>Close</button>
+        </MobileHeader.Container>) : (
         <Header.Section className='appearOut'>
           <Header.Logo href="#">
             Balasubramani M
@@ -29,7 +38,8 @@ const NavbarComponent = () => {
               </Header.LI>
             </Header.UL>
           </Header.Nav>
-          <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon">
+          {/* <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon"> */}
+          <Header.Icon onClick={openMobileHeaderFunc} className="headerIcon">
             <Header.SVG>
               <div dangerouslySetInnerHTML={{ __html: Menu }} />
             </Header.SVG>
@@ -40,4 +50,8 @@ const NavbarComponent = () => {
   )
 }
 
-export default NavbarComponent;
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps, { openMobileHeaderAction })(NavbarComponent);
