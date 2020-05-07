@@ -12,6 +12,8 @@ const Home = {
 const Main = {
   Container: styled.main`
     flex: 1;
+    transform: ${props => props.openMobileHeader ? 'translateY(100px) translateZ(0px)' : 'none'};
+    transition: transform 330ms ease-in-out;
     `,
   Section: styled.div``,
 }

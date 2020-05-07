@@ -47,11 +47,4 @@ const Header = {
   `,
 }
 
-const MobileHeader = {
-  Container: styled.div`
-    background: white;
-    height: 100px;
-  `,
-}
-
-export { Header, MobileHeader }
+export { Header }

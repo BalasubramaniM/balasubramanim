@@ -5,6 +5,8 @@ export const theme = {
   primaryBgColor: "#ff5a5f", // pink
   secondaryBgColor: '',
 
-  secondaryColor: "#145ae6", // Medium Black
-  tertiaryColor: "#767676" // light black
+  secondaryColor: "#145ae6", // Blue
+  tertiaryColor: "#767676", // light black
+  black: "#000",
+  white: "#fff",
 };

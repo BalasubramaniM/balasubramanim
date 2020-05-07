@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 import { HomePage } from './homePage.styles';
 import { TYPE_WRITER_STRINGS } from './homePage.constants';
 
-const HomePageComponent = (props) => {
+const HomePageComponent = () => {
   useEffect(() => {
     new Typewriter('#typewriter', {
       strings: TYPE_WRITER_STRINGS,
@@ -13,9 +13,8 @@ const HomePageComponent = (props) => {
       loop: true,
     });
   })
-  const { openMobileHeader } = props;
   return (
-    <HomePage.Section openMobileHeader={openMobileHeader}>
+    <HomePage.Section>
       <HomePage.Container>
         <HomePage.Content className='appearOut'>
           <HomePage.TypeWriter>
