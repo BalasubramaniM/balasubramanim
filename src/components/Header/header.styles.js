@@ -3,16 +3,15 @@ import styled from 'styled-components';
 const Header = {
   Container: styled.header`
     width: 100%;
-    height: 64px;
     position: fixed;
     color: ${props => props.theme.primaryColor};
     background: ${props => props.theme.primaryBgColor};
     z-index: 1;
+    overflow: hidden;
   `,
   Section: styled.div`
     max-width: 1540px;
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;

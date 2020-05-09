@@ -13,7 +13,7 @@ const NavbarComponent = (props) => {
   }
 
   return (
-    <Header.Container className="moveUp">
+    <Header.Container className="moveUp headerContainer">
       <Header.Section className='headerSection'>
         <Header.Logo href="#">
             Balasubramani M
