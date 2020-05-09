@@ -13,7 +13,7 @@ const HomePage = {
   `,
   Content: styled.div`
     /* margin-top: 72px; */
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     display: flex;
     align-items: center;
   `,

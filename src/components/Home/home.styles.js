@@ -14,6 +14,7 @@ const Main = {
     flex: 1;
     transform: ${props => props.openMobileHeader ? 'translateY(100px) translateZ(0px)' : 'none'};
     transition: transform 330ms ease-in-out;
+    margin-top: 64px;
     `,
   Section: styled.div``,
 }

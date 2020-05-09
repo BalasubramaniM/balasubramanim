@@ -6,6 +6,7 @@ const Header = {
     height: 64px;
     position: fixed;
     color: ${props => props.theme.primaryColor};
+    background: ${props => props.theme.primaryBgColor};
     z-index: 1;
   `,
   Section: styled.div`
@@ -15,11 +16,11 @@ const Header = {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
   `,
   Logo: styled.a`
     font-weight: 600;
     margin: 1em;
+    font-size: 1.5em;
   `,
   Nav: styled.nav``,
   UL: styled.ul``,

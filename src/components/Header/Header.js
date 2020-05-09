@@ -13,8 +13,8 @@ const NavbarComponent = (props) => {
   }
 
   return (
-    <Header.Container>
-      <Header.Section className='appearOut'>
+    <Header.Container className="moveUp">
+      <Header.Section className='headerSection'>
         <Header.Logo href="#">
             Balasubramani M
         </Header.Logo>
@@ -35,12 +35,28 @@ const NavbarComponent = (props) => {
           </Header.UL>
         </Header.Nav>
         {/* <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon"> */}
-        <Header.Icon onClick={openMobileHeaderFunc} className="headerIcon">
+        {/* <Header.Icon onClick={openMobileHeaderFunc} className="headerIcon">
           <Header.SVG>
             <div dangerouslySetInnerHTML={{ __html: Menu }} />
           </Header.SVG>
-        </Header.Icon>
+        </Header.Icon> */}
       </Header.Section>
+      <Header.Nav className="mobileHeaderNav">
+        <Header.UL>
+          <Header.LI>
+            <Header.NavItem href="#projects">Projects</Header.NavItem>
+          </Header.LI>
+          <Header.LI>
+            <Header.NavItem href="#">Experience</Header.NavItem>
+          </Header.LI>
+          <Header.LI>
+            <Header.NavItem href="#">Testimonials</Header.NavItem>
+          </Header.LI>
+          <Header.LI>
+            <Header.NavItem href="#">Contact</Header.NavItem>
+          </Header.LI>
+        </Header.UL>
+      </Header.Nav>
     </Header.Container>
   )
 }
