@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 
-const Header = {
+const MobileHeader = {
   Container: styled.header`
-    width: 100%;
-    height: 64px;
-    position: fixed;
-    color: ${props => props.theme.primaryColor};
-    background: ${props => props.theme.primaryBgColor};
-    z-index: 1;
+    width: ${props => props.openMobileHeader ? '75%' : '0px'};
+    height: 100%;
+    color: ${props => props.theme.black};
+    background: ${props => props.theme.white};
+    z-index: 2;
     overflow: hidden;
+    transition: all 0.2s ease-in;
+    position: fixed;
+    top: 0;
+    right: 0;
   `,
   Section: styled.div`
-    max-width: 1540px;
     width: 100%;
+    height: 64px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1.5em;
   `,
   Logo: styled.a`
@@ -26,8 +29,7 @@ const Header = {
   Nav: styled.nav``,
   UL: styled.ul``,
   LI: styled.li`
-    display: inline-block;
-    margin: 1em;
+    padding: 1em;
   `,
   NavItem: styled.a`
     :hover {
@@ -43,9 +45,9 @@ const Header = {
     cursor: pointer;
   `,
   SVG: styled.div`
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
   `,
 }
 
-export { Header }
+export { MobileHeader }

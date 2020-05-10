@@ -8,13 +8,13 @@ import { Header } from './header.styles';
 const NavbarComponent = (props) => {
 
   const { toggleMobileHeaderAction } = props;
-  const openMobileHeaderFunc = () => {
+  const toggleMobileHeader = () => {
     toggleMobileHeaderAction(true);
   }
 
   return (
-    <Header.Container className="moveUp headerContainer">
-      <Header.Section className='headerSection'>
+    <Header.Container className="moveUp">
+      <Header.Section>
         <Header.Logo href="#">
             Balasubramani M
         </Header.Logo>
@@ -35,11 +35,11 @@ const NavbarComponent = (props) => {
           </Header.UL>
         </Header.Nav>
         {/* <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon"> */}
-        {/* <Header.Icon onClick={openMobileHeaderFunc} className="headerIcon">
+        <Header.Icon onClick={toggleMobileHeader} className="headerIcon">
           <Header.SVG>
             <div dangerouslySetInnerHTML={{ __html: Menu }} />
           </Header.SVG>
-        </Header.Icon> */}
+        </Header.Icon>
       </Header.Section>
       <Header.Nav className="mobileHeaderNav">
         <Header.UL>
