@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Projects = {
   Section: styled.section`
-    height: 600px;
+    /* height: 600px; */
     /* color: ${props => props.theme.primaryColor}; */
     /* background: ${props => props.theme.primaryBgColor}; */
     background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(247, 224, 224) 100%);
@@ -18,11 +18,9 @@ const Projects = {
   `,
   List: styled.div`
     flex: 1;
-    padding: 1em;
   `,
   Desc: styled.div`
     flex: 1;
-    padding: 1em;
   `,
   Heading: styled.h1`
     font-size: 2em;

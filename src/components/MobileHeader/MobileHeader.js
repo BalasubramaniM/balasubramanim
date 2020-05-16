@@ -5,6 +5,8 @@ import { toggleMobileHeaderAction } from '../../actions/actions';
 import CloseIcon from './assets/signs.svg';
 import { MobileHeader } from './mobileHeader.styles';
 
+import { Icon } from '../HelperComponents';
+
 const MobileHeaderComponent = (props) => {
 
   const { toggleMobileHeaderAction, openMobileHeader } = props;
@@ -15,25 +17,26 @@ const MobileHeaderComponent = (props) => {
   return (
     <MobileHeader.Container className="mobileHeader" openMobileHeader={openMobileHeader}>
       <MobileHeader.Section>
-        <MobileHeader.Icon onClick={toggleMobileHeader} className="headerIcon">
+        <Icon onClick={toggleMobileHeader} className="headerIcon" icon='CLOSE'></Icon>
+        {/* <MobileHeader.Icon onClick={toggleMobileHeader} className="headerIcon">
           <MobileHeader.SVG>
             <div dangerouslySetInnerHTML={{ __html: CloseIcon }} />
           </MobileHeader.SVG>
-        </MobileHeader.Icon>
+        </MobileHeader.Icon> */}
       </MobileHeader.Section>
       <MobileHeader.Nav>
         <MobileHeader.UL>
           <MobileHeader.LI>
-            <MobileHeader.NavItem href="#projects">Projects</MobileHeader.NavItem>
+            <MobileHeader.NavItem onClick={toggleMobileHeader} href="#projects">Projects</MobileHeader.NavItem>
           </MobileHeader.LI>
           <MobileHeader.LI>
-            <MobileHeader.NavItem href="#">Experience</MobileHeader.NavItem>
+            <MobileHeader.NavItem onClick={toggleMobileHeader} href="#">Experience</MobileHeader.NavItem>
           </MobileHeader.LI>
           <MobileHeader.LI>
-            <MobileHeader.NavItem href="#">Testimonials</MobileHeader.NavItem>
+            <MobileHeader.NavItem onClick={toggleMobileHeader} href="#">Testimonials</MobileHeader.NavItem>
           </MobileHeader.LI>
           <MobileHeader.LI>
-            <MobileHeader.NavItem href="#">Contact</MobileHeader.NavItem>
+            <MobileHeader.NavItem onClick={toggleMobileHeader} href="#">Contact</MobileHeader.NavItem>
           </MobileHeader.LI>
         </MobileHeader.UL>
       </MobileHeader.Nav>

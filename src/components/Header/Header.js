@@ -5,6 +5,8 @@ import { toggleMobileHeaderAction } from '../../actions/actions';
 import Menu from './assets/menu.svg';
 import { Header } from './header.styles';
 
+import { Icon } from '../HelperComponents';
+
 const NavbarComponent = (props) => {
 
   const { toggleMobileHeaderAction } = props;
@@ -35,11 +37,12 @@ const NavbarComponent = (props) => {
           </Header.UL>
         </Header.Nav>
         {/* <Header.Icon onClick={() => setOpenMobileHeader(!openMobileHeader)} className="headerIcon"> */}
-        <Header.Icon onClick={toggleMobileHeader} className="headerIcon">
+        {/* <Header.Icon onClick={toggleMobileHeader} className="headerIcon">
           <Header.SVG>
             <div dangerouslySetInnerHTML={{ __html: Menu }} />
           </Header.SVG>
-        </Header.Icon>
+        </Header.Icon> */}
+        <Icon onClick={toggleMobileHeader} className="headerIcon" icon='MENU'></Icon>
       </Header.Section>
       <Header.Nav className="mobileHeaderNav">
         <Header.UL>

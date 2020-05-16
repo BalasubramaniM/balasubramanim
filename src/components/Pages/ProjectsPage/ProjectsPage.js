@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import ExternalLink from './assets/ExternalLink.svg';
 import { Projects } from './projectsPage.styles';
 import { ProjectsList } from './projectsPage.constants';
 
@@ -14,7 +15,7 @@ const ProjectsPageComponent = () => {
     <Projects.Section id="projects">
       <Projects.Container>
         <Projects.Content className='projectContent moveUp'>
-          <Projects.List>
+          <Projects.List className='projectsList'>
             <Projects.Heading>Projects</Projects.Heading>
             <Projects.SubTitle>Some of the projects that showcase my skills.</Projects.SubTitle>
             <Projects.AppContainer>
@@ -25,7 +26,7 @@ const ProjectsPageComponent = () => {
               ))}
             </Projects.AppContainer>
           </Projects.List>
-          <Projects.Desc>
+          <Projects.Desc className='projectsDesc'>
             <Projects.Title target="_blank" href={project.href}>{project.name}</Projects.Title>
             <Projects.Description>{project.desc}</Projects.Description>
           </Projects.Desc>

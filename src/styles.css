@@ -92,6 +92,9 @@ ul {
   .projectContent {
     flex-direction: column;
   }
+  .projectsList, .projectsDesc {
+    padding: 1em;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -104,6 +107,9 @@ ul {
   }
   .projectContent {
     flex-direction: column;
+  }
+  .projectsList, .projectsDesc {
+    padding: 1em;
   }
 }
 
@@ -118,6 +124,9 @@ ul {
   .projectContent {
     flex-direction: row;
   }
+  .projectsList, .projectsDesc {
+    padding: 4em 1em;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -131,6 +140,9 @@ ul {
   .projectContent {
     flex-direction: row;
   }
+  .projectsList, .projectsDesc {
+    padding: 4em 1em;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -143,5 +155,8 @@ ul {
   }
   .projectContent {
     flex-direction: row;
+  }
+  .projectsList, .projectsDesc {
+    padding: 4em 1em;
   }
 }
